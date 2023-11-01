@@ -11,16 +11,40 @@ body {
   transform: translate(-50%, -50%);
   width: 250px;
   height: 250px;
-  background-color: rgba(14, 14, 185, 0.5);
-  opacity: 0.5;
+  background: #d53369; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cbad6d,
+    #d53369
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cbad6d,
+    #d53369
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // opacity: 0.5;
   z-index: 1;
   border-radius: 10px;
   color: red;
   font-weight: 600;
   font-size: 18px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
 .box:hover {
   z-index: 0;
   background-color: rgba(20, 13, 119, 0.5);
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: rgb(253, 253, 253);
+
+  transform: translate(20px);
 }
